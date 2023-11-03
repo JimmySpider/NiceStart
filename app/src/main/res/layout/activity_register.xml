@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/hipman"
+        android:src="@drawable/Foto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
@@ -52,14 +52,14 @@
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/til1"
-        app:startIconDrawable="@drawable/ic_name_username"
+        app:startIconDrawable="@drawable/ic_name_password"
         >
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Repita su Correo"></EditText>
+            android:hint="Introduzca su contraseña"></EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -69,14 +69,14 @@
         app:layout_constraintEnd_toEndOf="@id/guideline2"
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/til2"
-        app:startIconDrawable="@drawable/ic_name_password"
+        app:startIconDrawable="@drawable/ic_name_repeat"
         >
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Introduzca su contraseña"></EditText>
+            android:hint="Repita su contraseña"></EditText>
 
     </com.google.android.material.textfield.TextInputLayout>
     <Button
@@ -96,6 +96,7 @@
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/boton1"
         style="@style/BotonTransparente"
+        android:textColor="@color/black"
         ></Button>
 
 
