@@ -14,7 +14,9 @@
         tools:targetApi="31">
         <activity
             android:name=".Register"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/Theme.NiceStart.Register"
+            android:parentActivityName=".Login"/>
         <activity
             android:name=".Login"
             android:exported="true">
