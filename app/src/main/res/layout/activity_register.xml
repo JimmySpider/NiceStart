@@ -59,7 +59,9 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Introduzca su contraseña"></EditText>
+            android:hint="Introduzca su contraseña">
+
+        </EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -76,7 +78,9 @@
             android:layout_height="wrap_content"
             android:alpha="0.6"
             android:background="@color/white"
-            android:hint="Repita su contraseña"></EditText>
+            android:hint="Repita su contraseña">
+
+        </EditText>
 
     </com.google.android.material.textfield.TextInputLayout>
     <Button
@@ -85,7 +89,8 @@
         app:layout_constraintStart_toStartOf="@id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/til3"
         android:text="SIGNUP"
-        style="@style/BotonPlano">
+        style="@style/BotonPlano"
+        android:onClick="openMain">
 
     </Button>
 
