@@ -24,9 +24,14 @@ public class Login extends AppCompatActivity {
                 .load(R.drawable.girl)
                 .transition(DrawableTransitionOptions.withCrossFade(4000))
                 .centerCrop()
+                //.circleCrop()
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200)))
                 .into(mGirl);
 
+    }
+    public void openSplash(View v){
+        Intent intent = new Intent(Login.this, Splash.class);
+        startActivity(intent);
     }
     public void openMain(View v){
         Intent intent = new Intent(Login.this,MainActivity.class);
