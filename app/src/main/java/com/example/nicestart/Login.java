@@ -29,10 +29,7 @@ public class Login extends AppCompatActivity {
                 .into(mGirl);
 
     }
-    public void openSplash(View v){
-        Intent intent = new Intent(Login.this, Splash.class);
-        startActivity(intent);
-    }
+
     public void openMain(View v){
         Intent intent = new Intent(Login.this,MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
