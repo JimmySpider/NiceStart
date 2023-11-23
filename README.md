@@ -1,3 +1,4 @@
+loginRodri
 ## Nice Start
 
 Esto es el  **readme** de una práctica
@@ -15,3 +16,6 @@ Y en esta otra podemos ver la página de registro
 ![login activity](app/img/registro.png)
 
 
+
+# NiceStart
+master
