@@ -27,3 +27,6 @@ Esto es el  **readme** de una práctica
 cada vez que refrescas la página genera una persona que no existe aleatoria**
 
 ![login activity](app/img/Nopeople.png)
+
+
+**Hice un pull request a Alvaro Guadalupe**
