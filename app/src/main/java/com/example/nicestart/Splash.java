@@ -35,7 +35,7 @@ public class Splash extends AppCompatActivity {
                 .into(mSplash);
         ImageView logo;
         logo = (ImageView) findViewById(R.id.rayo);
-        Animation rotate = AnimationUtils.loadAnimation(this,R.anim.blink);
+        Animation rotate = AnimationUtils.loadAnimation(this,R.anim.blink); //Para cargar una animacion en el logo, blink= efecto de parpadeo.
         logo.startAnimation(rotate);
 
         ImageView mLogo = findViewById(R.id.rayo);
@@ -45,11 +45,8 @@ public class Splash extends AppCompatActivity {
                 .into(mLogo);
 
     }
-    public void openSplash(View v){
-        Intent intent = new Intent(Splash.this,MainActivity.class);
-        startActivity(intent);
-    }
-    private void openApp() {
+
+    private void openApp() { //Para que se abra el splash con efecto
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
             @Override

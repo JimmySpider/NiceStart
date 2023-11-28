@@ -18,9 +18,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login1);
         ImageView mGirl = findViewById(R.id.chica);
-        Glide.with(this)
-                .load(R.drawable.girl)
-                .transition(DrawableTransitionOptions.withCrossFade(4000))
+        Glide.with(this)//Para importar imagenes
+                .load(R.drawable.girl) //Nombre de la imagen de como se llama
+                .transition(DrawableTransitionOptions.withCrossFade(4000)) //Transicion de como aparece
                 .centerCrop()
                 //.circleCrop()
                 .placeholder(new ColorDrawable(this.getResources().getColor(R.color.teal_200)))

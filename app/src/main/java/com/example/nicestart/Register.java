@@ -34,7 +34,7 @@ public class Register extends AppCompatActivity {
     }
 
 
-    public void openMain(View v){
+    public void openMain(View v){ //Para que se abra el Main al dar al boton linkeado en el xml con un onClick
         Intent intent = new Intent(Register.this,MainActivity.class);
         startActivity(intent);
     }
@@ -43,3 +43,7 @@ public class Register extends AppCompatActivity {
         startActivity(intent);
     }
 }
+
+// Los guideline son para poner lineas imaginarias para poner ahi lo que queremos en el XML
+//TextInputsLayout para definir los cuadros de texto de usuario y contraseña, luego ajustar los guidelines
+//View para poner el gradiente por si fuera necesario
