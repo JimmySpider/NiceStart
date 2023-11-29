@@ -32,3 +32,5 @@ cada vez que refrescas la página genera una persona que no existe aleatoria**
 **Hice un pull request a Alvaro Guadalupe**
 ![login activity](app/img/pullrequest.png)
 ![login activity](app/img/merge.png)
+
+![migif.gif](app/img/migif.gif)
