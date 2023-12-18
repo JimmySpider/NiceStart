@@ -21,8 +21,9 @@ public class Nopeople extends AppCompatActivity {
         //Creamos la variable para el swipe
         swipe_Layaout = (SwipeRefreshLayout) findViewById(R.id.myswipe);
         swipe_Layaout.setOnRefreshListener(mOnRefreshListener);
-        mi_Visor_Web = (WebView) findViewById(R.id.vistaweb);
 
+
+        mi_Visor_Web = (WebView) findViewById(R.id.vistaweb);
         WebSettings webSettings = mi_Visor_Web.getSettings();
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setUseWideViewPort(true);
