@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
+import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -95,6 +96,21 @@ public class MainActivity extends AppCompatActivity {
             }
         else return super.onContextItemSelected(item);
     }
+    public boolean onCreateOptionsMenu(Menu menu){
+        getMenuInflater().inflate(R.menu.menu_2,menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        int id = item.getItemId();
 
+        if (id==R.id.action_settings){
+            return true;
+        }
+        if(id==R.id.camera){
+            Toast toast = Toast.makeText(this,"going APPBAR CAMERA",Toast.LENGTH_LONG);
+            toast.show();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 }
