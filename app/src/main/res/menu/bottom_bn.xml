@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/likes"
+        android:title="Repeat"
+        android:icon="@drawable/ic_name_repeat"
+        android:contentDescription="none"
+        app:showAsAction="always"
+        />
+
+    <item
+        android:id="@+id/add"
+        android:title="Camera"
+        android:icon="@drawable/ic_name_camera"
+        android:contentDescription="none"
+        app:showAsAction="always"
+        >
+    </item>
+
+    <item
+        android:id="@+id/browse"
+        android:title="Password"
+        android:icon="@drawable/ic_name_password"
+        android:contentDescription="none"
+        app:showAsAction="always"
+        >
+    </item>
+
+    <item
+        android:id="@+id/personal"
+        android:title="Username"
+        android:icon="@drawable/ic_name_username"
+        android:contentDescription="none"
+        app:showAsAction="always"
+        />
+
+
+</menu>
