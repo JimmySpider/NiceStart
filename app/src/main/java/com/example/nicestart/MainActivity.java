@@ -1,8 +1,11 @@
 package com.example.nicestart;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,13 +18,18 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.webkit.WebView;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     private RatingBar ratingBar;
+    private Button boton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,13 +76,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Ignorable, dar funcion a un boton
+        boton =  findViewById(R.id.boton);
+        boton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showAlertDialogButtonClicked(MainActivity.this);
+            }
+        });
 
     }
 
     //Y es to lo creas para que funcione, esto solo vale para dos opciones
-    //Tendiras que enlazar if's
-    public void onCreateContextMenu(ContextMenu menu, View v,
-                                    ContextMenu.ContextMenuInfo menuInfo){
+    //Tendrias que enlazar if's
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
         super.onCreateContextMenu(menu,v,menuInfo);
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu,menu);
@@ -104,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if (id==R.id.action_settings){
+            showAlertDialogButtonClicked(MainActivity.this);
             return true;
         }
         if(id==R.id.camera){
@@ -112,5 +128,40 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+        
+        //Crear alerta de dialogo
+
+    public void showAlertDialogButtonClicked (MainActivity view){
+        MaterialAlertDialogBuilder builder = new
+                MaterialAlertDialogBuilder(this);
+        builder.setTitle("Pegrilo");
+        builder.setMessage("Onde va?");
+        builder.setIcon(R.drawable.ic_name_username);
+
+        builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setNeutralButton("Can't say", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+    }
+
+
+
 
 }
